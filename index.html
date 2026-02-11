@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BUG BLASTER</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <div id="orientation-warning">
+        <div class="icon-rotate">📱</div>
+        <p>Please rotate your device<br>to play!</p>
+    </div>
+
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="ui-layer">
+            <div class="hud-top">
+                <div id="score-display">SCORE: 0</div>
+                <div id="health-display">HP: 100%</div>
+            </div>
+
+            <div id="mobile-controls">
+                <div id="dpad-area" class="touch-zone">
+                    <div id="btn-left" class="control-btn">←</div>
+                    <div id="btn-right" class="control-btn">→</div>
+                    <div id="btn-down" class="control-btn">↓</div>
+                </div>
+                <div id="action-area" class="touch-zone">
+                    <div id="btn-shoot" class="control-btn">🔫</div>
+                    <div id="btn-jump" class="control-btn">⏏</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="start-screen">
+            <h1>BUG<br>BLASTER</h1>
+            <p>Arrow Keys / WASD to Move<br>DOWN to Sit<br>SPACE to Shoot</p>
+            <button class="btn-start" onclick="startGame()">START MISSION</button>
+        </div>
+
+        <div id="game-over-screen" class="hidden">
+            <h1>MISSION FAILED</h1>
+            <p id="final-score">Score: 0</p>
+            <button class="btn-start" onclick="startGame()">TRY AGAIN</button>
+        </div>
+    </div>
+
+<script src="scripts/index.js"></script>
+</body>
+</html>
